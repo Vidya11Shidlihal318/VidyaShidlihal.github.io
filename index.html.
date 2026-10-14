@@ -1,1 +1,721 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of Vidya Shidlihal, Electrical and Electronics Engineering graduate interested in Electrical Design, Embedded Systems and IoT.">
+<title>Vidya Shidlihal | Engineering Portfolio</title>
+
+<style>
+:root {
+    --navy: #14243d;
+    --blue: #1769aa;
+    --cyan: #19a5bd;
+    --light: #f3f7fc;
+    --text: #26364b;
+    --muted: #607087;
+    --white: #ffffff;
+    --border: #dce5ef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--blue);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav {
+    background: var(--navy);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+
+.nav-links a {
+    color: #edf5ff;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #63e0ed;
+}
+
+.hero {
+    background: linear-gradient(135deg, #14243d, #185c85);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.hero .eyebrow {
+    color: #83e1ed;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.2;
+    margin: 17px 0;
+}
+
+.hero h2 {
+    color: #d6e9fa;
+    font-size: clamp(17px, 3vw, 23px);
+    font-weight: normal;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: 18px auto;
+    color: #e1ebf6;
+}
+
+.hero-buttons {
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: var(--cyan);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+section {
+    padding: 65px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.about-box,
+.education-box,
+.contact-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(20, 36, 61, 0.04);
+}
+
+.about-box p {
+    margin-bottom: 14px;
+}
+
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.interest-list span {
+    background: #e7f3fc;
+    color: #185486;
+    padding: 8px 13px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skill-card,
+.project-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    box-shadow: 0 4px 15px rgba(20, 36, 61, 0.04);
+}
+
+.skill-card h3,
+.project-card h3 {
+    color: var(--blue);
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: #edf4fb;
+    color: #254968;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    border-top: 4px solid var(--cyan);
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.project-card .tech {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.education-box h3 {
+    color: var(--blue);
+    margin-bottom: 7px;
+}
+
+.education-box p {
+    margin: 5px 0;
+}
+
+.education-box .education-item + .education-item {
+    border-top: 1px solid var(--border);
+    margin-top: 23px;
+    padding-top: 23px;
+}
+
+.achievement {
+    background: #e9f5fc;
+    border-left: 4px solid var(--cyan);
+    padding: 22px;
+    border-radius: 7px;
+}
+
+.achievement h3 {
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.contact-box {
+    text-align: center;
+}
+
+.contact-box p {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-box a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: var(--navy);
+    color: #d8e4f1;
+    text-align: center;
+    padding: 24px 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 760px) {
+    .nav-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .skills-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 65px 18px;
+    }
+
+    section {
+        padding: 45px 0;
+    }
+
+    .about-box,
+    .education-box,
+    .contact-box,
+    .skill-card,
+    .project-card {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container nav-content">
+        <a class="logo" href="#home">Vidya Shidlihal</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+    <div class="container">
+        <p class="eyebrow">Engineering Portfolio</p>
+        <h1>Hi, I'm Vidya Shidlihal</h1>
+        <h2>Electrical and Electronics Engineering Graduate</h2>
+        <p>
+            Interested in Electrical Design Engineering, Embedded Systems,
+            Electronics, Hardware Testing and IoT.
+        </p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>My background and career interests</p>
+        </div>
+
+        <div class="about-box">
+            <p>
+                I am an Electrical and Electronics Engineering graduate
+                from KLE Technological University, Belagavi. I am interested
+                in electrical design, power systems, embedded systems,
+                microcontrollers and electronics.
+            </p>
+            <p>
+                My academic projects have introduced me to solar battery
+                charging, IoT-based solar monitoring, sensor interfacing
+                and automated lighting control. I am looking for an
+                entry-level engineering opportunity where I can apply
+                my technical knowledge, improve my practical skills
+                and contribute to engineering work.
+            </p>
+
+            <div class="interest-list">
+                <span>Electrical Design</span>
+                <span>Electrical Systems</span>
+                <span>Embedded Systems</span>
+                <span>Hardware Testing</span>
+                <span>IoT Applications</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+            <p>Electrical design, electronics and embedded systems</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Electrical Design Engineering</h3>
+                <div class="tags">
+                    <span>Single Line Diagrams (SLD)</span>
+                    <span>Electrical Equipment Sizing</span>
+                    <span>Cable Sizing Basics</span>
+                    <span>Load Calculation</span>
+                    <span>Basic Fault Level Calculation</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Electrical Systems</h3>
+                <div class="tags">
+                    <span>Power Distribution</span>
+                    <span>Cable Sizing</span>
+                    <span>Voltage Drop Calculations</span>
+                    <span>Earthing</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Electrical Equipment</h3>
+                <div class="tags">
+                    <span>Transformers</span>
+                    <span>Circuit Breakers</span>
+                    <span>Distribution Boards (DB)</span>
+                    <span>Electrical Panels</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Electrical Drawings & Documentation</h3>
+                <div class="tags">
+                    <span>Building Electrical Layouts</span>
+                    <span>Electrical Schematics</span>
+                    <span>Panel Schedules</span>
+                    <span>Cable Schedules</span>
+                    <span>Bill of Quantities (BOQ)</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Testing, Inspection & Safety</h3>
+                <div class="tags">
+                    <span>Electrical Inspection Basics</span>
+                    <span>Testing and Verification</span>
+                    <span>Quality Checking</span>
+                    <span>Electrical Safety Awareness</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <div class="tags">
+                    <span>C Programming</span>
+                    <span>Embedded C</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Microcontrollers & Platforms</h3>
+                <div class="tags">
+                    <span>8051</span>
+                    <span>Arduino</span>
+                    <span>ESP32</span>
+                    <span>STM32</span>
+                    <span>Raspberry Pi</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Core Subjects</h3>
+                <div class="tags">
+                    <span>Analog Electronics</span>
+                    <span>Digital Electronics</span>
+                    <span>Circuit Analysis</span>
+                    <span>Electrical Machines</span>
+                    <span>Power Systems</span>
+                    <span>ARM Fundamentals</span>
+                    <span>RTOS Basics</span>
+                    <span>PCB Fundamentals</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Communication Protocols</h3>
+                <div class="tags">
+                    <span>UART</span>
+                    <span>I2C</span>
+                    <span>SPI</span>
+                    <span>RS-232</span>
+                    <span>RS-485</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Embedded Peripherals</h3>
+                <div class="tags">
+                    <span>GPIO</span>
+                    <span>Timers and Counters</span>
+                    <span>Interrupts</span>
+                    <span>ADC</span>
+                    <span>DAC</span>
+                    <span>PWM</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Software & Engineering Tools</h3>
+                <div class="tags">
+                    <span>AutoCAD Electrical</span>
+                    <span>MATLAB / Simulink</span>
+                    <span>PLECS</span>
+                    <span>Revit Basics</span>
+                    <span>Proteus</span>
+                    <span>ARTOP</span>
+                    <span>Keil µVision</span>
+                    <span>KiCad</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Office & Documentation Tools</h3>
+                <div class="tags">
+                    <span>MS Excel</span>
+                    <span>MS Word</span>
+                    <span>MS PowerPoint</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Debugging & Testing</h3>
+                <div class="tags">
+                    <span>Hardware Debugging</span>
+                    <span>Problem Solving</span>
+                    <span>Testing and Validation</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Professional Skills</h3>
+                <div class="tags">
+                    <span>Analytical Thinking</span>
+                    <span>Teamwork</span>
+                    <span>Communication Skills</span>
+                    <span>Attention to Detail</span>
+                    <span>Willingness to Learn</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <div class="section-title">
+            <h2>Academic Projects</h2>
+            <p>Engineering concepts explored through my projects</p>
+        </div>
+
+        <div class="project-grid">
+
+            <article class="project-card">
+                <h3>MPPT-Based Solar Battery Charging System</h3>
+                <p class="tech">STM32 | P&O MPPT | Boost Converter</p>
+                <p>
+                    Designed and simulated a solar panel battery charging
+                    system using the Perturb and Observe (P&O) MPPT
+                    technique to extract maximum available power for
+                    lighting applications.
+                </p>
+                <p>
+                    <strong>Focus:</strong> Solar energy, voltage and
+                    current sensing, DC-DC conversion and battery charging.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>IoT-Based Solar Panel Monitoring</h3>
+                <p class="tech">ESP32 | Sensors | Wi-Fi | ThingSpeak</p>
+                <p>
+                    Worked on an IoT-based solar panel monitoring project
+                    to monitor parameters such as voltage, current,
+                    temperature and sunlight intensity.
+                </p>
+                <p>
+                    <strong>Focus:</strong> Sensor interfacing,
+                    microcontrollers and remote monitoring.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>Automated Lighting Control System</h3>
+                <p class="tech">ESP32 | PIR Sensor | LDR</p>
+                <p>
+                    Developed an automated lighting control project
+                    using motion and light sensors to control lighting
+                    based on occupancy and surrounding brightness.
+                </p>
+                <p>
+                    <strong>Focus:</strong> Automation, sensor inputs
+                    and embedded control.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h3>Predictive Modeling of PMSM Temperature</h3>
+                <p class="tech">Machine Learning | Linear Regression</p>
+                <p>
+                    Worked on a machine learning project to estimate
+                    Permanent Magnet Synchronous Motor (PMSM)
+                    temperature using torque-related input data.
+                </p>
+                <p>
+                    <strong>Focus:</strong> Data analysis, prediction
+                    and motor thermal behavior.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <div class="container">
+        <div class="section-title">
+            <h2>Education</h2>
+            <p>My academic background</p>
+        </div>
+
+        <div class="education-box">
+            <div class="education-item">
+                <h3>Bachelor of Engineering</h3>
+                <p>Electrical and Electronics Engineering</p>
+                <p>KLE Technological University, Belagavi</p>
+                <p><strong>CGPA:</strong> 8.25 / 10</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="achievements">
+    <div class="container">
+        <div class="section-title">
+            <h2>Achievements</h2>
+            <p>Academic recognition</p>
+        </div>
+
+        <div class="achievement">
+            <h3>First Prize - Mini Project</h3>
+            <p>
+                Received first prize for a mini project on an
+                IoT-based solar panel monitoring system.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Me</h2>
+            <p>Connect with me for entry-level engineering opportunities</p>
+        </div>
+
+        <div class="contact-box">
+            <p>
+                <strong>Email:</strong>
+                YOUR_EMAIL_ADDRESS
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                Add your LinkedIn profile URL
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/" target="_blank"
+                   rel="noopener noreferrer">Visit GitHub</a>
+            </p>
+
+            <p>
+                <strong>Resume:</strong>
+                Add your resume PDF link here when ready
+            </p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Vidya Shidlihal | Engineering Portfolio</p>
+    <p>Electrical Design Engineering | Embedded Systems | IoT</p>
+</footer>
+
+</body>
+</html>
